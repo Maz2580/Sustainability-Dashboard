@@ -1,4 +1,4 @@
-# Sustainability-Dashboard
+# V3 Sustainability Dashboard
 
 An interactive dashboard showcasing the University of Melbourne's sustainability performance across academic, operational, and community areas, tracking progress towards Sustainability Plan 2030 targets.
 
