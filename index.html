@@ -13,59 +13,58 @@
       width: 8px;
       height: 8px;
     }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-    body {
-      font-family: 'Inter', sans-serif; /* Using a common sans-serif font often used with Tailwind */
-    }
-    /* Adding Inter font from Google Fonts if not available via Tailwind CDN. 
-       Tailwind often uses system fonts by default. For consistency: */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-    /* Basic styling for prose from Tailwind Typography */
-    .prose {
-      color: #374151; /* gray-700 */
-    }
-    .prose h1, .prose h2, .prose h3, .prose h4 {
-      color: #1f2937; /* gray-800 */
-    }
-    .prose a {
-      color: #2563eb; /* blue-600 */
-    }
-    .prose strong {
-      color: #1f2937; /* gray-800 */
-    }
-    .prose ul > li::before {
-        background-color: #6b7280; /* gray-500 */
-    }
-
-  </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.0.0",
-    "react/": "https://esm.sh/react@^19.0.0/",
-    "react-dom": "https://esm.sh/react-dom@^19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@^19.0.0/client",
-    "recharts": "https://esm.sh/recharts@^2.15.3",
-    "papaparse": "https://esm.sh/papaparse@5.4.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
-  }
-}
-</script>
-</head>
-<body class="bg-gray-100">
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sustainability Dashboard</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.x/dist/typography.min.css" rel="stylesheet">
+      <style>
+        /* Custom scrollbar for better aesthetics if needed */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        body {
+          font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .prose { color: #374151; }
+        .prose h1, .prose h2, .prose h3, .prose h4 { color: #1f2937; }
+        .prose a { color: #2563eb; }
+        .prose strong { color: #1f2937; }
+        .prose ul > li::before { background-color: #6b7280; }
+      </style>
+      <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.0.0",
+          "react/": "https://esm.sh/react@^19.0.0/",
+          "react-dom": "https://esm.sh/react-dom@^19.0.0",
+          "react-dom/client": "https://esm.sh/react-dom@^19.0.0/client",
+          "recharts": "https://esm.sh/recharts@^2.15.3",
+          "papaparse": "https://esm.sh/papaparse@5.4.1",
+          "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+        }
+      }
+      </script>
+    </head>
+    <body class="bg-gray-100">
+      <div id="root"></div>
+      <script type="module" src="/index.tsx"></script>
+    </body>
+    </html>
 </html><link rel="stylesheet" href="index.css">
-<script src="index.tsx" type="module"></script>
