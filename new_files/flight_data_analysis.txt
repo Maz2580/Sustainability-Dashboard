@@ -1,0 +1,72 @@
+=== Flight Data Analysis Report ===
+Analysis performed on: 2025-05-12 15:06:19
+
+=== Basic Dataset Information ===
+Number of rows: 17358
+Number of columns: 38
+
+=== Key Metrics Analysis ===
+
+Total GHG Emissions by Quarter:
+Quarter
+Q1         5.621418e+06
+Q2         1.152368e+07
+Q3         1.077590e+07
+Q4         8.261708e+06
+Quarter    0.000000e+00
+Name: Total_GHG_Emissions, dtype: float64
+
+Top 5 Faculties by Total Emissions:
+Faculty
+MDHS Reporting Division                  8.655907e+06
+Engineering and IT Reporting Division    4.150502e+06
+Chancellery Reporting Division           3.821870e+06
+ARTS Reporting Division                  3.694690e+06
+SCI Reporting Division                   3.670177e+06
+Name: Total_GHG_Emissions, dtype: float64
+
+Flight Type Distribution:
+Flight_Type
+Audomestic       8595
+International    8114
+Trnstasman        559
+Long Haul          63
+Domestic           21
+Short Haul          4
+Haul Type           1
+Unknown             1
+Name: count, dtype: int64
+
+Class of Travel Distribution:
+Class_of_Travel
+Economy            15679
+Business            1084
+Premium Economy      582
+First                 12
+Class of Travel        1
+Name: count, dtype: int64
+
+Top 10 Most Common Routes:
+Route
+MEL/SYD/MEL    1170
+MEL/CBR/MEL     677
+MEL/BNE/MEL     520
+MEL/ADL/MEL     411
+SYD/MEL         368
+MEL/SYD         348
+SYD/MEL/SYD     326
+CBR/MEL         293
+MEL/CBR         284
+MEL/PER/MEL     260
+Name: count, dtype: int64
+
+Emissions by Haul Category:
+Haul_Category
+Long-haul              3.660833e+07
+Short-haul             2.383164e+06
+Very short             1.035639e+04
+Distance type          0.000000e+00
+Negative Very short   -7.620257e+02
+Negative short-haul   -5.588790e+04
+Negative Long-haul    -2.762494e+06
+Name: Total_GHG_Emissions, dtype: float64

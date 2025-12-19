@@ -1,0 +1,543 @@
+{
+  "faculties": [
+    {
+      "Faculty": "MDHS Reporting Division",
+      "Flight_Count": 3894,
+      "Total_Emissions": 8655907.457524091,
+      "Total_Distance": 4303341.31,
+      "Emissions_per_km": 2.011438748167547,
+      "Emissions_Percentage": 23.92
+    },
+    {
+      "Faculty": "Engineering and IT Reporting Division",
+      "Flight_Count": 1816,
+      "Total_Emissions": 4150502.466734525,
+      "Total_Distance": 1890480.9,
+      "Emissions_per_km": 2.1954744249119496,
+      "Emissions_Percentage": 11.47
+    },
+    {
+      "Faculty": "Chancellery Reporting Division",
+      "Flight_Count": 2912,
+      "Total_Emissions": 3821869.846026424,
+      "Total_Distance": 2470827.9,
+      "Emissions_per_km": 1.5467972682461713,
+      "Emissions_Percentage": 10.56
+    },
+    {
+      "Faculty": "ARTS Reporting Division",
+      "Flight_Count": 1631,
+      "Total_Emissions": 3694690.040812294,
+      "Total_Distance": 1698955.96,
+      "Emissions_per_km": 2.174682644988805,
+      "Emissions_Percentage": 10.21
+    },
+    {
+      "Faculty": "SCI Reporting Division",
+      "Flight_Count": 1918,
+      "Total_Emissions": 3670176.7605613773,
+      "Total_Distance": 1746593.52,
+      "Emissions_per_km": 2.1013342363490373,
+      "Emissions_Percentage": 10.14
+    },
+    {
+      "Faculty": "FBE Reporting Division",
+      "Flight_Count": 1227,
+      "Total_Emissions": 3071735.7819100823,
+      "Total_Distance": 1531607.31,
+      "Emissions_per_km": 2.0055635422046154,
+      "Emissions_Percentage": 8.49
+    },
+    {
+      "Faculty": "UNIVERSITY GENERAL",
+      "Flight_Count": 698,
+      "Total_Emissions": 1999853.4836377697,
+      "Total_Distance": 949072.0599999999,
+      "Emissions_per_km": 2.107167166672012,
+      "Emissions_Percentage": 5.53
+    },
+    {
+      "Faculty": "-",
+      "Flight_Count": 744,
+      "Total_Emissions": 1487773.9980064896,
+      "Total_Distance": 782384.84,
+      "Emissions_per_km": 1.9015884791511166,
+      "Emissions_Percentage": 4.11
+    },
+    {
+      "Faculty": "MGSE Reporting Division",
+      "Flight_Count": 634,
+      "Total_Emissions": 1463533.277010496,
+      "Total_Distance": 716309.33,
+      "Emissions_per_km": 2.0431581939753545,
+      "Emissions_Percentage": 4.04
+    },
+    {
+      "Faculty": "MLS Reporting Division",
+      "Flight_Count": 487,
+      "Total_Emissions": 1142447.3832460323,
+      "Total_Distance": 574716.35,
+      "Emissions_per_km": 1.9878456272316463,
+      "Emissions_Percentage": 3.16
+    },
+    {
+      "Faculty": "ABP Reporting Division",
+      "Flight_Count": 403,
+      "Total_Emissions": 950145.3708424523,
+      "Total_Distance": 429512.91,
+      "Emissions_per_km": 2.2121462445504894,
+      "Emissions_Percentage": 2.63
+    },
+    {
+      "Faculty": "FAM Reporting Division",
+      "Flight_Count": 387,
+      "Total_Emissions": 914968.7996330496,
+      "Total_Distance": 379705.16,
+      "Emissions_per_km": 2.409682290419887,
+      "Emissions_Percentage": 2.53
+    },
+    {
+      "Faculty": "Veterinary and Agricultural Sciences Reporting Division",
+      "Flight_Count": 387,
+      "Total_Emissions": 761515.2211344762,
+      "Total_Distance": 381512.4,
+      "Emissions_per_km": 1.9960431722126888,
+      "Emissions_Percentage": 2.1
+    },
+    {
+      "Faculty": "SUBSIDIARIES",
+      "Flight_Count": 106,
+      "Total_Emissions": 201574.07727350108,
+      "Total_Distance": 101282.48,
+      "Emissions_per_km": 1.9902166423403247,
+      "Emissions_Percentage": 0.56
+    },
+    {
+      "Faculty": "Advancement Reporting Division",
+      "Flight_Count": 113,
+      "Total_Emissions": 196008.6894700644,
+      "Total_Distance": 139882.46,
+      "Emissions_per_km": 1.4012385074587936,
+      "Emissions_Percentage": 0.54
+    },
+    {
+      "Faculty": "Faculty",
+      "Flight_Count": 1,
+      "Total_Emissions": 0.0,
+      "Total_Distance": 0.0,
+      "Emissions_per_km": 0.0,
+      "Emissions_Percentage": 0.0
+    }
+  ],
+  "departments": [
+    {
+      "Faculty": "MDHS Reporting Division",
+      "Department": "MDHS",
+      "Flight_Count": 3894,
+      "Total_Emissions": 8655907.457524091,
+      "Total_Distance": 4303341.31,
+      "Emissions_per_km": 2.011438748167547
+    },
+    {
+      "Faculty": "Engineering and IT Reporting Division",
+      "Department": "FEIT",
+      "Flight_Count": 1816,
+      "Total_Emissions": 4150502.466734525,
+      "Total_Distance": 1890480.9,
+      "Emissions_per_km": 2.1954744249119496
+    },
+    {
+      "Faculty": "Chancellery Reporting Division",
+      "Department": "Chancellery",
+      "Flight_Count": 2912,
+      "Total_Emissions": 3821869.846026424,
+      "Total_Distance": 2470827.9,
+      "Emissions_per_km": 1.5467972682461713
+    },
+    {
+      "Faculty": "ARTS Reporting Division",
+      "Department": "ARTS",
+      "Flight_Count": 1631,
+      "Total_Emissions": 3694690.040812294,
+      "Total_Distance": 1698955.96,
+      "Emissions_per_km": 2.174682644988805
+    },
+    {
+      "Faculty": "SCI Reporting Division",
+      "Department": "SCI",
+      "Flight_Count": 1918,
+      "Total_Emissions": 3670176.7605613773,
+      "Total_Distance": 1746593.52,
+      "Emissions_per_km": 2.1013342363490373
+    },
+    {
+      "Faculty": "FBE Reporting Division",
+      "Department": "FBE",
+      "Flight_Count": 1227,
+      "Total_Emissions": 3071735.7819100823,
+      "Total_Distance": 1531607.31,
+      "Emissions_per_km": 2.0055635422046154
+    },
+    {
+      "Faculty": "UNIVERSITY GENERAL",
+      "Department": "University General",
+      "Flight_Count": 698,
+      "Total_Emissions": 1999853.4836377697,
+      "Total_Distance": 949072.0599999999,
+      "Emissions_per_km": 2.107167166672012
+    },
+    {
+      "Faculty": "-",
+      "Department": "Unspecified",
+      "Flight_Count": 744,
+      "Total_Emissions": 1487773.9980064896,
+      "Total_Distance": 782384.84,
+      "Emissions_per_km": 1.9015884791511166
+    },
+    {
+      "Faculty": "MGSE Reporting Division",
+      "Department": "FoE",
+      "Flight_Count": 634,
+      "Total_Emissions": 1463533.277010496,
+      "Total_Distance": 716309.33,
+      "Emissions_per_km": 2.0431581939753545
+    },
+    {
+      "Faculty": "MLS Reporting Division",
+      "Department": "Law",
+      "Flight_Count": 487,
+      "Total_Emissions": 1142447.3832460323,
+      "Total_Distance": 574716.35,
+      "Emissions_per_km": 1.9878456272316463
+    },
+    {
+      "Faculty": "ABP Reporting Division",
+      "Department": "ABP",
+      "Flight_Count": 403,
+      "Total_Emissions": 950145.3708424523,
+      "Total_Distance": 429512.91,
+      "Emissions_per_km": 2.2121462445504894
+    },
+    {
+      "Faculty": "FAM Reporting Division",
+      "Department": "FAM",
+      "Flight_Count": 387,
+      "Total_Emissions": 914968.7996330496,
+      "Total_Distance": 379705.16,
+      "Emissions_per_km": 2.409682290419887
+    },
+    {
+      "Faculty": "Veterinary and Agricultural Sciences Reporting Division",
+      "Department": "SCI",
+      "Flight_Count": 387,
+      "Total_Emissions": 761515.2211344762,
+      "Total_Distance": 381512.4,
+      "Emissions_per_km": 1.9960431722126888
+    },
+    {
+      "Faculty": "SUBSIDIARIES",
+      "Department": "Subsidiaries",
+      "Flight_Count": 106,
+      "Total_Emissions": 201574.07727350108,
+      "Total_Distance": 101282.48,
+      "Emissions_per_km": 1.9902166423403247
+    },
+    {
+      "Faculty": "Advancement Reporting Division",
+      "Department": "Chancellery",
+      "Flight_Count": 113,
+      "Total_Emissions": 196008.6894700644,
+      "Total_Distance": 139882.46,
+      "Emissions_per_km": 1.4012385074587936
+    },
+    {
+      "Faculty": "Faculty",
+      "Department": "Updated Faculty/Department names (SST)",
+      "Flight_Count": 1,
+      "Total_Emissions": 0.0,
+      "Total_Distance": 0.0,
+      "Emissions_per_km": 0.0
+    }
+  ],
+  "travel_classes": [
+    {
+      "Class_of_Travel": "Economy",
+      "Flight_Count": 15679,
+      "Total_Emissions": 24946635.45128791,
+      "Total_Distance": 11973950.14,
+      "Emissions_per_km": 2.0834089969985383
+    },
+    {
+      "Class_of_Travel": "Business",
+      "Flight_Count": 1084,
+      "Total_Emissions": 8448137.132599654,
+      "Total_Distance": 4736569.52,
+      "Emissions_per_km": 1.783598255431001
+    },
+    {
+      "Class_of_Travel": "Premium Economy",
+      "Flight_Count": 582,
+      "Total_Emissions": 2738733.762472045,
+      "Total_Distance": 1372020.99,
+      "Emissions_per_km": 1.9961310959769247
+    },
+    {
+      "Class_of_Travel": "First",
+      "Flight_Count": 12,
+      "Total_Emissions": 49196.30746351568,
+      "Total_Distance": 13644.24,
+      "Emissions_per_km": 3.6056465925193106
+    },
+    {
+      "Class_of_Travel": "Class of Travel",
+      "Flight_Count": 1,
+      "Total_Emissions": 0.0,
+      "Total_Distance": 0.0,
+      "Emissions_per_km": 0.0
+    }
+  ],
+  "quarters": [
+    {
+      "Quarter": "Q1",
+      "Flight_Count": 2829,
+      "Total_Emissions": 5621418.100074213,
+      "Total_Distance": 2936707.72
+    },
+    {
+      "Quarter": "Q2",
+      "Flight_Count": 4406,
+      "Total_Emissions": 11523680.233005965,
+      "Total_Distance": 5596508.81
+    },
+    {
+      "Quarter": "Q3",
+      "Flight_Count": 5108,
+      "Total_Emissions": 10775896.398043917,
+      "Total_Distance": 5297359.74
+    },
+    {
+      "Quarter": "Q4",
+      "Flight_Count": 5014,
+      "Total_Emissions": 8261707.922699029,
+      "Total_Distance": 4265608.62
+    }
+  ],
+  "months": [
+    {
+      "Month": "Jan",
+      "Flight_Count": 524,
+      "Total_Emissions": 1221940.2597620615,
+      "Total_Distance": 610708.51,
+      "Month_Order": 1
+    },
+    {
+      "Month": "Feb",
+      "Flight_Count": 1245,
+      "Total_Emissions": 1939876.3361916181,
+      "Total_Distance": 1108877.71,
+      "Month_Order": 2
+    },
+    {
+      "Month": "Mar",
+      "Flight_Count": 1060,
+      "Total_Emissions": 2459601.5041205334,
+      "Total_Distance": 1217121.5,
+      "Month_Order": 3
+    },
+    {
+      "Month": "Jul",
+      "Flight_Count": 1439,
+      "Total_Emissions": 3106423.7045094185,
+      "Total_Distance": 1589176.56,
+      "Month_Order": 7
+    },
+    {
+      "Month": "Aug",
+      "Flight_Count": 1688,
+      "Total_Emissions": 3275650.6475853166,
+      "Total_Distance": 1535475.36,
+      "Month_Order": 8
+    },
+    {
+      "Month": "Sep",
+      "Flight_Count": 1981,
+      "Total_Emissions": 4393822.045949182,
+      "Total_Distance": 2172707.82,
+      "Month_Order": 9
+    },
+    {
+      "Month": "Oct",
+      "Flight_Count": 1610,
+      "Total_Emissions": 2960939.586199843,
+      "Total_Distance": 1405643.92,
+      "Month_Order": 10
+    },
+    {
+      "Month": "Nov",
+      "Flight_Count": 2269,
+      "Total_Emissions": 3490244.4061474823,
+      "Total_Distance": 1863976.99,
+      "Month_Order": 11
+    },
+    {
+      "Month": "Dec",
+      "Flight_Count": 1135,
+      "Total_Emissions": 1810523.9303517034,
+      "Total_Distance": 995987.71,
+      "Month_Order": 12
+    }
+  ],
+  "routes": {
+    "frequent_routes": [
+      {
+        "Route": "MEL/SYD/MEL",
+        "Flight_Count": 1170,
+        "Total_Emissions": 311316.7056634557,
+        "Average_Distance": 364.86311111111115,
+        "Emissions_per_Flight": 266.08265441321
+      },
+      {
+        "Route": "MEL/CBR/MEL",
+        "Flight_Count": 677,
+        "Total_Emissions": 116963.05894397334,
+        "Average_Distance": 452.27599704579023,
+        "Emissions_per_Flight": 172.76670449626786
+      },
+      {
+        "Route": "MEL/BNE/MEL",
+        "Flight_Count": 520,
+        "Total_Emissions": 261027.9542296292,
+        "Average_Distance": 421.13065384615385,
+        "Emissions_per_Flight": 501.9768350569792
+      },
+      {
+        "Route": "MEL/ADL/MEL",
+        "Flight_Count": 411,
+        "Total_Emissions": 97111.4573187474,
+        "Average_Distance": 367.9389051094891,
+        "Emissions_per_Flight": 236.2809180504803
+      },
+      {
+        "Route": "SYD/MEL",
+        "Flight_Count": 368,
+        "Total_Emissions": 47602.65928505381,
+        "Average_Distance": 172.96777173913043,
+        "Emissions_per_Flight": 129.35505240503753
+      },
+      {
+        "Route": "MEL/SYD",
+        "Flight_Count": 348,
+        "Total_Emissions": 47240.07721309287,
+        "Average_Distance": 158.8668103448276,
+        "Emissions_per_Flight": 135.74734831348525
+      },
+      {
+        "Route": "SYD/MEL/SYD",
+        "Flight_Count": 326,
+        "Total_Emissions": 82922.52348417466,
+        "Average_Distance": 349.94404907975456,
+        "Emissions_per_Flight": 254.36356896986092
+      },
+      {
+        "Route": "CBR/MEL",
+        "Flight_Count": 293,
+        "Total_Emissions": 26056.1058050634,
+        "Average_Distance": 207.23542662116043,
+        "Emissions_per_Flight": 88.9286887544826
+      },
+      {
+        "Route": "MEL/CBR",
+        "Flight_Count": 284,
+        "Total_Emissions": 26200.859217285528,
+        "Average_Distance": 216.7425352112676,
+        "Emissions_per_Flight": 92.25654653973777
+      },
+      {
+        "Route": "MEL/PER/MEL",
+        "Flight_Count": 260,
+        "Total_Emissions": 283350.517647558,
+        "Average_Distance": 717.5751923076924,
+        "Emissions_per_Flight": 1089.8096832598385
+      }
+    ],
+    "high_emission_routes": [
+      {
+        "Route": "MEL/SIN/LHR/SIN/MEL",
+        "Flight_Count": 62,
+        "Total_Emissions": 528624.0690424584,
+        "Average_Distance": 3284.8693548387096,
+        "Emissions_per_Flight": 8526.194661975136
+      },
+      {
+        "Route": "MEL/LAX/MEL",
+        "Flight_Count": 72,
+        "Total_Emissions": 390068.99895022745,
+        "Average_Distance": 2399.5041666666666,
+        "Emissions_per_Flight": 5417.624985419826
+      },
+      {
+        "Route": "MEL/AUH/LHR/AUH/MEL",
+        "Flight_Count": 28,
+        "Total_Emissions": 346761.8314559589,
+        "Average_Distance": 3810.3821428571428,
+        "Emissions_per_Flight": 12384.351123427103
+      },
+      {
+        "Route": "MEL/SYD/MEL",
+        "Flight_Count": 1170,
+        "Total_Emissions": 311316.7056634557,
+        "Average_Distance": 364.86311111111115,
+        "Emissions_per_Flight": 266.08265441321
+      },
+      {
+        "Route": "MEL/SIN/MEL",
+        "Flight_Count": 100,
+        "Total_Emissions": 305371.7086351623,
+        "Average_Distance": 1246.6244,
+        "Emissions_per_Flight": 3053.7170863516226
+      },
+      {
+        "Route": "MEL/DEL/MEL",
+        "Flight_Count": 72,
+        "Total_Emissions": 289236.16341618914,
+        "Average_Distance": 1807.127361111111,
+        "Emissions_per_Flight": 4017.16893633596
+      },
+      {
+        "Route": "MEL/PER/MEL",
+        "Flight_Count": 260,
+        "Total_Emissions": 283350.517647558,
+        "Average_Distance": 717.5751923076924,
+        "Emissions_per_Flight": 1089.8096832598385
+      },
+      {
+        "Route": "MEL/HKG/MEL",
+        "Flight_Count": 82,
+        "Total_Emissions": 276365.6335906953,
+        "Average_Distance": 1407.594756097561,
+        "Emissions_per_Flight": 3370.3126047645765
+      },
+      {
+        "Route": "MEL/DXB/FCO/DXB/MEL",
+        "Flight_Count": 41,
+        "Total_Emissions": 273833.20346519974,
+        "Average_Distance": 2310.951219512195,
+        "Emissions_per_Flight": 6678.858621102433
+      },
+      {
+        "Route": "MEL/BNE/MEL",
+        "Flight_Count": 520,
+        "Total_Emissions": 261027.9542296292,
+        "Average_Distance": 421.13065384615385,
+        "Emissions_per_Flight": 501.9768350569792
+      }
+    ]
+  },
+  "summary": {
+    "total_flights": 17358,
+    "total_emissions": 36182702.65382312,
+    "total_distance": 18096184.89,
+    "average_emissions_per_km": 1.9994657920309922
+  },
+  "analysis_date": "2025-12-19 05:06:17"
+}

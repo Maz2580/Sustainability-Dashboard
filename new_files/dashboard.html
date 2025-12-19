@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Emissions Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .dashboard-header {
+            background-color: #006ab4;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        .card-header {
+            background-color: #006ab4;
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            padding: 12px 20px;
+            font-weight: 600;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .stat-value {
+            font-size: 30px;
+            font-weight: bold;
+            color: #006ab4;
+        }
+        .stat-label {
+            font-size: 16px;
+            color: #6c757d;
+        }
+        .chart-container {
+            position: relative;
+            height: 350px;
+            margin-bottom: 20px;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #006ab4;
+        }
+        .nav-pills .nav-link {
+            color: #006ab4;
+        }
+        .tab-content {
+            padding: 20px 0;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .top-margin {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>University Flight Emissions Dashboard</h1>
+                    <p class="lead">Analysis of flight data from March 2023 to December 2024</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <p class="mb-0">Last updated: <span id="analysis-date"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Key Statistics Section -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-flights"></div>
+                    <div class="stat-label">Total Flights</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-emissions"></div>
+                    <div class="stat-label">Total Emissions (tonnes CO₂e)</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-distance"></div>
+                    <div class="stat-label">Total Distance (km)</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value" id="avg-emissions"></div>
+                    <div class="stat-label">Avg. Emissions (kg CO₂e/km)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-8">
+                <!-- Faculty Emissions Chart -->
+                <div class="card mb-4">
+                    <div class="card-header">Faculty Emissions</div>
+                    <div class="card-body">
+                        <img src="visualizations/faculty_emissions.png" alt="Faculty Emissions" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Tabs for Time-based Analysis -->
+                <div class="card mb-4">
+                    <div class="card-header">Time-based Analysis</div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="time-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="quarterly-tab" data-bs-toggle="pill" data-bs-target="#quarterly" type="button">Quarterly</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="monthly-tab" data-bs-toggle="pill" data-bs-target="#monthly" type="button">Monthly</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="quarterly">
+                                <img src="visualizations/quarterly_emissions.png" alt="Quarterly Emissions" class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="monthly">
+                                <img src="visualizations/monthly_emissions.png" alt="Monthly Emissions" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Routes Analysis -->
+                <div class="card">
+                    <div class="card-header">Route Analysis</div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="routes-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="frequent-tab" data-bs-toggle="pill" data-bs-target="#frequent" type="button">Most Frequent Routes</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="emissions-tab" data-bs-toggle="pill" data-bs-target="#emissions" type="button">Highest Emissions Routes</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="frequent">
+                                <div class="table-responsive">
+                                    <table class="table table-striped" id="frequent-routes-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Route</th>
+                                                <th>Flight Count</th>
+                                                <th>Total Emissions (kg CO₂e)</th>
+                                                <th>Avg. Distance (km)</th>
+                                                <th>Emissions per Flight (kg CO₂e)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="emissions">
+                                <div class="table-responsive">
+                                    <table class="table table-striped" id="high-emission-routes-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Route</th>
+                                                <th>Flight Count</th>
+                                                <th>Total Emissions (kg CO₂e)</th>
+                                                <th>Avg. Distance (km)</th>
+                                                <th>Emissions per Flight (kg CO₂e)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-4">
+                <!-- Travel Class Analysis -->
+                <div class="card mb-4">
+                    <div class="card-header">Travel Class Analysis</div>
+                    <div class="card-body">
+                        <img src="visualizations/class_emissions.png" alt="Travel Class Emissions" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Top Routes by Emissions -->
+                <div class="card mb-4">
+                    <div class="card-header">Top Routes by Emissions</div>
+                    <div class="card-body">
+                        <img src="visualizations/top_routes_emissions.png" alt="Top Routes by Emissions" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Department Emissions -->
+                <div class="card">
+                    <div class="card-header">Department Emissions</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="dept-table">
+                                <thead>
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>Flights</th>
+                                        <th>Emissions (tonnes CO₂e)</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>University Flight Emissions Dashboard</h5>
+                    <p>A comprehensive analysis of university-related flight emissions to support sustainability initiatives.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 University Sustainability Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load and process the dashboard data
+        $(document).ready(function() {
+            $.getJSON('dashboard_data/dashboard_data.json', function(data) {
+                // Update summary statistics
+                $('#total-flights').text(data.summary.total_flights.toLocaleString());
+                $('#total-emissions').text((data.summary.total_emissions / 1000000).toFixed(2));
+                $('#total-distance').text(Math.round(data.summary.total_distance).toLocaleString());
+                $('#avg-emissions').text(data.summary.average_emissions_per_km.toFixed(2));
+                $('#analysis-date').text(data.analysis_date);
+
+                // Populate frequent routes table
+                let frequentRoutesHTML = '';
+                data.routes.frequent_routes.forEach(route => {
+                    frequentRoutesHTML += `<tr>
+                        <td>${route.Route}</td>
+                        <td>${route.Flight_Count.toLocaleString()}</td>
+                        <td>${Math.round(route.Total_Emissions).toLocaleString()}</td>
+                        <td>${route.Average_Distance.toFixed(1)}</td>
+                        <td>${route.Emissions_per_Flight.toFixed(1)}</td>
+                    </tr>`;
+                });
+                $('#frequent-routes-table tbody').html(frequentRoutesHTML);
+
+                // Populate high emission routes table
+                let highEmissionRoutesHTML = '';
+                data.routes.high_emission_routes.forEach(route => {
+                    highEmissionRoutesHTML += `<tr>
+                        <td>${route.Route}</td>
+                        <td>${route.Flight_Count.toLocaleString()}</td>
+                        <td>${Math.round(route.Total_Emissions).toLocaleString()}</td>
+                        <td>${route.Average_Distance.toFixed(1)}</td>
+                        <td>${route.Emissions_per_Flight.toFixed(1)}</td>
+                    </tr>`;
+                });
+                $('#high-emission-routes-table tbody').html(highEmissionRoutesHTML);
+
+                // Populate department table
+                let deptHTML = '';
+                // Get top 10 departments by emissions
+                const topDepts = [...data.departments]
+                    .filter(dept => dept.Department !== "Updated Faculty/Department names (SST)")
+                    .sort((a, b) => b.Total_Emissions - a.Total_Emissions)
+                    .slice(0, 10);
+                
+                topDepts.forEach(dept => {
+                    deptHTML += `<tr>
+                        <td>${dept.Department}</td>
+                        <td>${dept.Flight_Count.toLocaleString()}</td>
+                        <td>${(dept.Total_Emissions / 1000000).toFixed(2)}</td>
+                    </tr>`;
+                });
+                $('#dept-table tbody').html(deptHTML);
+            });
+        });
+    </script>
+</body>
+</html> 
