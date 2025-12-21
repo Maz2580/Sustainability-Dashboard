@@ -1,4 +1,4 @@
-import { MainCategoryDisplay, ChartType, Metric, WidgetType, KpiGridWidgetConfig, ChartGridWidgetConfig, RichTextWidgetConfig, Widget } from './types';
+import { MainCategoryDisplay, ChartType, Metric, WidgetType, KpiGridWidgetConfig, ChartGridWidgetConfig, RichTextWidgetConfig, Widget, EmbeddedContentWidgetConfig } from './types';
 import {
   EnergyIcon, WaterIcon, WasteIcon, EmissionsIcon, UpTrendIcon, DownTrendIcon,
   BookOpenIcon, UsersIcon, ShoppingCartIcon, BuildingOfficeIcon, AcademicCapIcon,
@@ -10,6 +10,26 @@ const RECHART_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff7300', '#00C49F', '
 export const ADMIN_EMAIL = 'mazdak.gh1995@gmail.com';
 
 const teachingAndResearchMetrics: Metric[] = [
+  {
+    id: 'tr-teaching-learning-research',
+    name: 'Teaching, Learning and Research',
+    description: 'ArcGIS Experience — interactive materials for teaching and learning.',
+    icon: BookOpenIcon,
+    accentColor: 'border-teal-500', bgColor: 'bg-teal-500', textColor: 'text-teal-700',
+    data: {
+      widgets: [
+        {
+          id: 'tr-tlr-embed',
+          type: WidgetType.EMBEDDED_CONTENT,
+          config: {
+            title: 'Interactive Teaching & Learning Experience',
+            url: 'https://experience.arcgis.com/experience/665ad956533c46be86b67d84a96d588b',
+            height: '80vh'
+          } as EmbeddedContentWidgetConfig,
+        }
+      ] as Widget[],
+    }
+  },
   {
     id: 'tr-courses',
     name: 'FEIT Sustainability-Related Courses',

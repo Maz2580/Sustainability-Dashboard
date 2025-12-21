@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Metric, User } from '../types';
+import { Metric, User, WidgetType, EmbeddedContentWidgetConfig } from '../types';
+import TeachingLearningResearch from './TeachingLearningResearch';
 
 type Props = {
   metric: Metric;
@@ -32,7 +33,7 @@ const DashboardModal: React.FC<Props> = ({ metric, onClose, currentUser, onEditD
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center">
       <div className="bg-black/60 absolute inset-0" onClick={onClose} />
-      <div className="relative bg-slate-800 text-white p-4 md:p-6 rounded-lg shadow-lg max-w-5xl w-full z-50">
+      <div className="relative bg-slate-800 text-white p-4 md:p-6 rounded-lg shadow-lg max-w-8xl w-full z-50 max-h-[92vh] overflow-hidden">
         <div className="flex items-start justify-between mb-3">
           <div>
             <h3 className="text-xl font-semibold">{metric.name}</h3>
@@ -47,7 +48,7 @@ const DashboardModal: React.FC<Props> = ({ metric, onClose, currentUser, onEditD
         </div>
 
         {isAirTravel ? (
-          <div className="w-full h-[70vh] overflow-auto bg-white text-slate-800 rounded px-6 py-4">
+          <div className="w-full h-[85vh] overflow-auto bg-white text-slate-800 rounded px-6 py-4">
             {loading && <div className="text-center py-8">Loading flight dashboard data…</div>}
             {error && <div className="text-red-600">Error loading data: {error}</div>}
             {!loading && !error && flightData && (
@@ -125,12 +126,21 @@ const DashboardModal: React.FC<Props> = ({ metric, onClose, currentUser, onEditD
           </div>
         ) : (
           <div>
-            {metric.data?.widgets?.map((w, idx) => (
-              <div key={w.id || idx} className="mb-4 p-3 bg-slate-700 rounded">
-                <div className="text-sm text-slate-200 font-medium">{(w as any).config?.title || w.id}</div>
-                <div className="text-sm text-slate-300 mt-1">Widget preview not available in modal.</div>
-              </div>
-            ))}
+            {metric.id === 'tr-teaching-learning-research' ? (
+              (() => {
+                const embedWidget = metric.data.widgets?.find(w => w.type === WidgetType.EMBEDDED_CONTENT);
+                const url = (embedWidget?.config as EmbeddedContentWidgetConfig)?.url || '';
+                const height = (embedWidget?.config as EmbeddedContentWidgetConfig)?.height || '80vh';
+                return <div className="overflow-auto h-[80vh] p-2"><TeachingLearningResearch experienceUrl={url} height={height} /></div>;
+              })()
+            ) : (
+              metric.data?.widgets?.map((w, idx) => (
+                <div key={w.id || idx} className="mb-4 p-3 bg-slate-700 rounded">
+                  <div className="text-sm text-slate-200 font-medium">{(w as any).config?.title || w.id}</div>
+                  <div className="text-sm text-slate-300 mt-1">Widget preview not available in modal.</div>
+                </div>
+              ))
+            )}
           </div>
         )}
       </div>
