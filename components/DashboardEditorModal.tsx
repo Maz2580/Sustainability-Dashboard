@@ -13,7 +13,7 @@ const DashboardEditorModal: React.FC<Props> = ({ metric, isOpen, onClose, onSave
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center">
       <div className="bg-black/60 absolute inset-0" onClick={onClose} />
-      <div className="relative bg-slate-800 text-white p-6 rounded-lg shadow-lg max-w-3xl w-full z-50">
+      <div className="relative bg-slate-800 text-white p-6 rounded-lg shadow-lg max-w-3xl w-[90%] z-50">
         <h3 className="text-lg font-semibold mb-2">Edit Dashboard: {metric.name}</h3>
         <p className="text-sm text-slate-300 mb-4">This is a lightweight editor stub.</p>
         <div className="flex justify-end">
